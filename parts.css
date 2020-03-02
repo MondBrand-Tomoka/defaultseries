@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+
+/* ボタン、パーツ
+--------------*/
+p.btn{
+	margin-top: 25px;
+	text-align: center;
+}
+p.btn a{
+	display: inline-block;
+	padding: 10px 30px;
+	font-size: 16px;
+	/*border: 1px solid #888;*/
+	transition: .3s;
+}
+p.btn a::before{
+	content:">";
+	margin-right: 15px;
+}
+p.btn a:hover{
+	/*background: #989;*/
+	color: #fff;
+}
+
+
+
+
+/*　totop
+-----------------------*/
+.toTopBtn{
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	bottom: 16px;
+	right: 30px;
+}
+.toTopBtn a i, .toTopBtn a{
+	color: rgba(187,187,187,0.8);/*bbb*/
+}
+.toTopBtn i{ font-size: 3.8em; }
+.toTopBtn a{ font-size: 10px; }
+
+
+
+
+
+
+
+/* りすと
+------------------*/
+
+ul.discList{
+	padding-left: 35px;
+	box-sizing: border-box;
+	text-align: left;
+}
+
+ul.discList li + li{ margin-top: 8px; } 
+ul.discList li::before{
+	content:"";
+	display: inline-block;
+	/*background: #ddd;*/
+	width: 14px;
+	height: 14px;
+	border-radius: 7px;
+	margin-left: -24px;
+	margin-right: 10px;
+}
+
