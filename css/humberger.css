@@ -21,6 +21,7 @@
 		right: 13px;
 		z-index: 1600;
 		background: #5693ce;
+		box-shadow: 0 0.6px 2px #333;
 		border-radius: 5px;
 		cursor: pointer;
 	}
@@ -68,7 +69,7 @@
 		position: absolute;/* ディスプレイ参照 */
 		top: 5px;
 		right: -300px;
-		transition: .6s;
+		transition: .5s;
 	}
 	.glonav__menu.active{
 		width: 240px;
