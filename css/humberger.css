@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.humbMenu, .spLogo{display: none;}
+
+
+@media screen and ( max-width: 660px ){
+	header{
+		height: 0;
+		background: none;
+		border-bottom: none;
+	}
+	header > .logo{ display: none; }
+	.humbMenu, .spLogo{ display: inline-block; }/* PCでは非表示のものを表示 */
+
+	.humbMenu{
+		width: 25px;
+		height: 25px;
+		padding: 6px 5px 3px;
+		position: absolute;
+		top: 15px;
+		right: 13px;
+		z-index: 1600;
+		background: #5693ce;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	
+	.humbMenu__line, 
+	.humbMenu__line::before, 
+	.humbMenu__line::after{
+		width: 20px;
+		height: 3px;
+		display: inline-block;
+		background: #ddd;
+		border-radius: 2px;
+	}
+	.humbMenu__line{
+		position: relative;
+	}
+	.humbMenu__line::before, 
+	.humbMenu__line::after{
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+		z-index: 1700;
+	}
+	.humbMenu__line::before{ top:-7px; }
+	.humbMenu__line::after{ top: 7px; }
+
+	/* グロナビ選択中（active付与） */
+	.humbMenu.active .humbMenu__line{ background: none; }
+	.humbMenu.active .humbMenu__line::before{
+		transform: rotate(45deg);
+		top:0;
+		transition: .4s;
+	}
+	.humbMenu.active .humbMenu__line::after{
+		transform: rotate(-45deg);
+		top:0;
+		transition: .4s;
+	}
+
+	.glonav__menu{
+		width: 0;
+		overflow: hidden;
+		position: absolute;/* ディスプレイ参照 */
+		top: 5px;
+		right: -300px;
+		transition: .6s;
+	}
+	.glonav__menu.active{
+		width: 240px;
+		height: 250px;
+		padding: 10px;
+		right: 5px;
+		background: rgba(255,255,255,.8);
+		border-radius: 5px;
+		box-shadow: 0 2px 5px #333;
+		z-index: 1500;
+	}
+	.glonav__menu.active li{
+		width: 100%;
+		border-bottom: 1px dotted #5693ce;
+		margin-bottom: 10px;
+	}
+	.glonav__menu.active li a{
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+		padding: 5px;
+		box-sizing: border-box;
+	}
+}

@@ -1,10 +1,14 @@
 
 CDN
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+WPの時は読み込まなくてOK
+
 
 
 Totop
 <script>
+
+	WPの時
 	jQuery(function ($) {
 
 		$(".toTopBtn").hide();
@@ -17,7 +21,21 @@ Totop
 		});//Totop
 
 	});
+
+	静的HTML
+	$(function(){
+		$(".toTopBtn").hide();
+		$(window).scroll(function(){
+			if($(this).scrollTop() > 1200){
+				$(".toTopBtn").fadeIn();
+			} else {
+				$(".toTopBtn").fadeOut();//defaultは400
+			}
+		});
+	});
+
 </script>
+
 
 
 クリップボードにコピー
@@ -44,3 +62,9 @@ Totop
 
 コードに色を付ける
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script><!-- codeに色をつける　&ltと&gtではさむこと　class="prettyprint lang-css"必須 -->
+
+
+
+
+タイプテキスト
+<script src="js/typetext.js"></script>
