@@ -1,0 +1,38 @@
+
+.btn{ margin: 20px auto 30px; }
+.btn a{
+	border: 1px solid #888;
+	font-size: 13px;
+	padding: 10px 25px;
+	transition: 0.4s;
+}
+.btn a::before{
+	content: "> ";
+}
+.btn a:hover{
+	background: #C40069;
+	color: #fff;
+	border: 1px solid #c40069;
+}
+
+.btn.reverse a{
+	border: 1px solid #888;
+	background: #888;
+	color: #fff;
+}
+.btn.reverse a:hover{
+	background: none;
+	color: #888;
+	border: 1px solid #888;
+}
+
+.btn.cv a{
+	border: 1px solid #888;
+	background: #888;
+	color: #fff;
+}
+.btn.cv a:hover{
+	background: none;
+	color: #888;
+	border: 1px solid #888;
+}
