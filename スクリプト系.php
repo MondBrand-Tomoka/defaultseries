@@ -1,7 +1,6 @@
 
 CDN
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-WPの時は読み込まなくてOK
 
 
 
