@@ -11,12 +11,37 @@ html{ scroll-behavior: smooth; }
 	font-weight: normal;
 }
 
-
 a{ color: inherit; }
+a.ib{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+
+a.under{
+	text-decoration: underline;
+}
+a.under:hover{ opacity: .4; }
+
+
+
 
 b{ font-weight: bold; }
 s{ text-decoration: line-through; }
 
+
+.wrapper{
+	width: 85%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 660px){
+	br.sp{ display: none; }
+	.wrapper{
+		width: 97%;
+	}
+}
 
 
 .flex{
@@ -25,12 +50,6 @@ s{ text-decoration: line-through; }
 	flex-wrap: wrap;
 }
 .nowrap{ flex-wrap: nowrap; }
-
-
-a.under{
-	text-decoration: underline;
-}
-a.under:hover{ opacity: .4; }
 
 .tc{ text-align: center; }
 .tl{ text-align: left; }
@@ -138,10 +157,6 @@ a.under:hover{ opacity: .4; }
 .w33p{ width: calc(100% / 3); }
 .w16p{ width: calc(100% / 6); }
 
-@media screen and (min-width: 660px){
-	br.sp{ display: none; }
-}
-
 table{
 	margin: 10px auto;
 	border-spacing: 0;
@@ -161,5 +176,9 @@ table td{ border-collapse: collapse; }
 .fz24{ font-size: 24px; }
 .fz28{ font-size: 28px; }
 .fz32{ font-size: 32px; }
+.fz36{ font-size: 36px; }
+.fz48{ font-size: 48px; }
+.fz64{ font-size: 64px; }
+.fz72{ font-size: 72px; }
 
 

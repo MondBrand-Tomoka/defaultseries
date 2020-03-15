@@ -1,0 +1,45 @@
+<ul class="discList">
+  <li class="discList__child">りすと</li>
+    <li>りすと</li>
+    <li>りすとりすとりすとりすとりすと<br>りすとりすとりすとりすとりすとりすとりすと</li>
+    <li>りすと</li>
+    <li>りすと</li>
+</ul>
+
+
+
+<style>
+	*{ list-style-type: none; }
+
+
+	ul.discList{
+		width: 90%;
+		max-width: 640px;
+		padding-left: 10%;
+		box-sizing: border-box;
+		text-align: left;
+	}
+
+	ul.discList li + li{ margin-top: 8px; } 
+	ul.discList li::before{
+		content:"";
+		display: inline-block;
+		background: #ddd;
+		width: 14px;
+		height: 14px;
+		border-radius: 7px;
+		margin-left: -30px;
+		margin-right: 16px;
+	}
+
+
+	@media screen and (max-width: 660px){
+		ul.discList li::before{
+			width: 9px;
+			height: 9px;
+			margin-left: -22px;
+			margin-right: 12px;
+		}
+	}
+
+</style>

@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+*{text-decoration: none;}
+
+/* サイドのインデックス
+ホバーするとにゅっと出てくる
+----------------------*/
+.sideCvArea{
+	width: 80px;
+	margin-right: -35px;
+	background: #C40069;
+	position: fixed;
+	top: 64vh;
+	right: 0;
+	z-index: 998;
+	box-shadow: 0 1px 3px #333;
+	transition: .3s;
+}
+.sideCvArea a{
+	width: 100%;
+	padding: 15px 10px;
+	display: inline-block;
+	color: #fff;
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+	letter-spacing: .45em;
+
+}
+.sideCvArea:hover{ margin-right: 0; }

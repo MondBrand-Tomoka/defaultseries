@@ -1,0 +1,63 @@
+
+
+
+
+/*　かぎかっこタイトル
+https://codepen.io/KawaMond/pen/GRJdRKK
+------------------------------*/
+
+*{text-align: center;}
+
+h2{
+	display: inline-block;
+	width: calc(100% - 60px);
+	max-width: 640px;
+	margin: 0 auto 35px;
+	padding-top: 15px;/*ページ内リンクの余白用*/
+	font-size: 30px;
+	letter-spacing: .04em;
+	line-height: 185%;
+	font-family: "游明朝","Hiragino Mincho ProN",serif;
+	font-weight: normal;
+	position: relative;
+}
+h2 span.section__inner--sub{
+	font-family: "游明朝","Hiragino Mincho ProN",serif;
+	color: #777;
+}
+h2::before, h2::after{
+	content:"";
+	display: inline-block;
+	width: 40px;
+	height: 50px;
+	position: absolute;
+}
+h2::before{
+	top: 5px;
+	left: -10px;
+	z-index: 10;
+	border-top: 2px solid #dab;
+	border-left: 2px solid #dab;
+}
+h2::after{
+	bottom: -15px;
+	right: -10px;
+	border-right: 2px solid #dab;
+	border-bottom: 2px solid #dab;
+}
+
+@media screen and ( max-width: 800px ){/* スマホ＋ipad縦 */
+	*{ font-size: .96em; }
+	h2{
+		font-size: 21px;
+		line-height: 180%;
+		letter-spacing: .03em;
+	}
+}
+
+
+
+
+
+/*　
+------------------------------*/

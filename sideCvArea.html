@@ -1,0 +1,25 @@
+<!-- 
+サイドのインデックス
+ホバーするとにゅっと出てくる
+sideCvArea.cssと一緒に使う -->
+
+<div class="sideCvArea">
+	<a href="https://mondbrand.net/script/mailform/orderme/" onClick="ga('send','event','brandme','click','side',1);" class="serif">CONTACT</a>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$(function(){
+		$(".sideCvArea").hide();
+		$(window).scroll(function(){
+			if($(this).scrollTop() > 740){
+				$(".sideCvArea").fadeIn();
+			} else {
+				$(".sideCvArea").fadeOut();//defaultは400
+			}
+		});
+	});
+</script>
+

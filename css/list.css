@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+
+/*　円形りすと
+https://codepen.io/KawaMond/pen/LYVmYEM
+------------------------------*/
+
+
+ul.discList{
+	width: 90%;
+	max-width: 640px;
+	padding-left: 10%;
+	box-sizing: border-box;
+	text-align: left;
+}
+
+ul.discList li + li{ margin-top: 8px; } 
+ul.discList li::before{
+	content:"";
+	display: inline-block;
+	background: #ddd;
+	width: 14px;
+	height: 14px;
+	border-radius: 7px;
+	margin-left: -30px;
+	margin-right: 16px;
+}
+
+
+@media screen and (max-width: 660px){
+	ul.discList li::before{
+		width: 9px;
+		height: 9px;
+		margin-left: -22px;
+		margin-right: 12px;
+	}
+}
+
+
+
+
+
+
+.grayArea, .lineArea, .dotArea, .colorArea{
+	margin: 20px auto 30px;
+	padding: 20px 25px 15px;
+	box-sizing: border-box;
+}
+.grayArea{
+	background: #f6f6f6;
+}
+.colorArea{ background: #f7f1f6; }
+.lineArea{
+	border: 1px solid #ddd;
+}
+.dotArea{
+	border: 3px dotted #ddd;
+}

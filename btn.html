@@ -1,0 +1,90 @@
+
+<p class="btn"><a fref="a">ボタン</a></p>
+<p class="btn reverse"><a fref="a">ボタン</a></p>
+<p class="btn cv"><a fref="a">ボタン</a></p>
+
+
+
+<p class="btn"><a fref="a">ボタン</a></p>
+へこむ系はボタンが連続してるとうまくいかない
+<div class="area">
+<p class="btn reverse"><a fref="a">ボタン</a></p>
+</div>
+<p class="btn cv"><a fref="a">ボタン</a></p>
+
+
+
+<style>
+	/* ホバーすると色が変わる系
+	https://codepen.io/KawaMond/pen/ExjLYJE
+	-----------------------------*/
+	.btn{ margin: 20px auto 30px; }
+	.btn a{
+		border: 1px solid #888;
+		font-size: 13px;
+		padding: 10px 25px;
+		transition: 0.4s;
+	}
+	.btn a::before{
+		content: "> ";
+	}
+	.btn a:hover{
+		background: #C40069;
+		color: #fff;
+		border: 1px solid #c40069;
+	}
+
+	.btn.reverse a{
+		border: 1px solid #888;
+		background: #888;
+		color: #fff;
+	}
+	.btn.reverse a:hover{
+		background: none;
+		color: #888;
+	}
+
+	.btn.cv a{
+		border: 1px solid #c40069;
+		background: #c40069;
+		color: #fff;
+		font-weight: bold;
+	}
+	.btn.cv a:hover{
+		background: none;
+		color: #c40069;
+	}
+
+
+	/* ホバーするとへこむ系、角丸あり
+	-----------------------------*/
+	.btn{
+		width: 200px;
+		margin: 30px auto 45px;
+		border-radius: 10px;
+		background: #e0d0de;
+		box-shadow: 0 1px 3px #333;
+		border-bottom: 3px solid #ac9caa;
+	}
+	.btn a{
+		color: #fff;
+		display: inline-block;
+		width: 200px;
+		padding: 10px 0;
+		font-size: 20px;
+		text-align: center;
+	}
+	.btn:hover{
+		margin: 32px auto 43px;
+		border-bottom: 1px solid #ac9caa;
+		transition: .2s;
+	}
+
+	.area{
+	  padding: 10px;
+	  background:#eee;
+	}	/*動作確認用*/
+
+
+
+</style>

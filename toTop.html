@@ -1,0 +1,47 @@
+
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+<div class="toTopBtn tc">
+	<a href="#"><i class="fas fa-arrow-circle-up"></i><br>先頭へ戻る</a>
+</div>
+
+
+<style>
+	
+/*　totop
+-----------------------*/
+.tc{ text-align: center; }
+
+	.toTopBtn{
+		width: 60px;
+		height: 60px;
+		position: fixed;
+		bottom: 16px;
+		right: 45px;
+	}
+	.toTopBtn a i, .toTopBtn a{
+		color: rgba(187,187,187,0.8);/*bbb*/
+		text-shadow: 0 0 4px rgba(255,255,255,0.7);
+	}
+	.toTopBtn i{ font-size: 3.8em; }
+	.toTopBtn a{ font-size: 10px; }
+
+</style>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+		$(function(){
+			$(".toTopBtn").hide();
+			$(window).scroll(function(){
+				if($(this).scrollTop() > 1200){
+					$(".toTopBtn").fadeIn();
+				} else {
+					$(".toTopBtn").fadeOut();//defaultは400
+				}
+			});
+		});
+
+</script>
+
