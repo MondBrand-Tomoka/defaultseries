@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+.separate{
+    margin: 20px auto 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.separate.nowrap{ flex-wrap: nowrap;}
+
+.separate__child{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/*確認用。本番で消す*/
+.separate__child:first-child{
+    background: rgb(78, 136, 165);
+}
+.separate__child:nth-child(2){
+    background: #cec0cb;
+    border: 4px solid #ddd;
+}
+
+
+.separate.per15 .separate__child:first-child{ width: 15%;}
+.separate.per20 .separate__child:first-child{ width: 20%;}
+.separate.per30 .separate__child:first-child{ width: 30%;}
+.separate.per40 .separate__child:first-child{ width: 40%;}
+
+.separate.per15 .separate__child:nth-child(2){ width: 85%;}
+.separate.per20 .separate__child:nth-child(2){ width: 80%;}
+.separate.per30 .separate__child:nth-child(2){ width: 70%;}
+.separate.per40 .separate__child:nth-child(2){ width: 60%;}
+
+
+.separate.px80 .separate__child:first-child{ width: 80px;}
+.separate.px100 .separate__child:first-child{ width: 100px;}
+.separate.px120 .separate__child:first-child{ width: 120px;}
+.separate.px160 .separate__child:first-child{ width: 160px;}
+.separate.px180 .separate__child:first-child{ width: 180px;}
+.separate.px200 .separate__child:first-child{ width: 200px;}
+.separate.px200 .separate__child:first-child{ width: 240px;}
+.separate.px200 .separate__child:first-child{ width: 280px;}
+.separate.px320 .separate__child:first-child{ width: 320px;}
+
+.separate.px80 .separate__child:nth-child(2){ width: calc(100% - 80px);}
+.separate.px100 .separate__child:nth-child(2){ width: calc(100% - 100px);}
+.separate.px120 .separate__child:nth-child(2){ width: calc(100% - 120px);}
+.separate.px160 .separate__child:nth-child(2){ width: calc(100% - 160px);}
+.separate.px180 .separate__child:nth-child(2){ width: calc(100% - 180px);}
+.separate.px200 .separate__child:nth-child(2){ width: calc(100% - 200px);}
+.separate.px200 .separate__child:nth-child(2){ width: calc(100% - 240px);}
+.separate.px200 .separate__child:nth-child(2){ width: calc(100% - 280px);}
+.separate.px320 .separate__child:nth-child(2){ width: calc(100% - 320px);}
+
+.separate.reverse .separate__child:first-child{ order: 2;}
+
+
+@media screen and (max-width: 660px){
+    .separate__child{ margin: 10px auto; }
+    
+    div[class^="per"] .separate__child{
+        width: 100%;
+    }
+    .separate.wrap .separate__child:nth-child(2){
+        width: 100%;
+    }
+}
+
