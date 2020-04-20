@@ -1,31 +1,49 @@
 @charset "utf-8";
 
-
+*{margin: 0;
+	padding:0;
+	list-style-type:none;
+	text-decoration: none;
+  }
+ 
 /*　円形りすと
 https://codepen.io/KawaMond/pen/LYVmYEM
 ------------------------------*/
-
-
-ul.discList{
-	width: 90%;
-	max-width: 640px;
-	padding-left: 10%;
-	box-sizing: border-box;
-	text-align: left;
+ 
+ul.discList, 
+ol.numList{
+	margin-bottom: 20px;
 }
-
-ul.discList li + li{ margin-top: 8px; } 
+ul.discList li, 
+ol.numList li{
+	margin-left: 30px;
+	margin-bottom: 8px;
+}
 ul.discList li::before{
-	content:"";
+	content: ""; 
 	display: inline-block;
-	background: #ddd;
-	width: 14px;
-	height: 14px;
-	border-radius: 7px;
-	margin-left: -30px;
-	margin-right: 16px;
+	margin-left: -25px; 
+	margin-right: 15px; 
+	width: 12px; 
+	height: 12px; 
+	background: #eee; 
+	border-radius: 6px;
 }
 
+ol.numList{
+	counter-reset: item;/*連番つける*/
+}
+
+ol.numList li::before{
+	counter-increment: item;
+	content: counter(item)".";
+	display: inline-block;
+	margin-right: 10px;
+	color: #ddd7dc;
+	font-size: 1.3em;
+	font-family: 'Cinzel',"游明朝","ヒラギノ明朝 ProN",Hiragino Mincho ProN,serif;
+	margin-left: -1em;
+}
 
 @media screen and (max-width: 660px){
 	ul.discList li::before{
@@ -35,6 +53,7 @@ ul.discList li::before{
 		margin-right: 12px;
 	}
 }
+
 
 
 
