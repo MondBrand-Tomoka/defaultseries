@@ -1,4 +1,6 @@
-
+https://developer.mozilla.org/ja/docs/Web/HTML/Element/details
+Jsなしで開閉を作る
+（Faqとかに便利）
 
 
 <details>
@@ -28,6 +30,16 @@
 
 	summary::-webkit-details-marker{
 	  display:none;/*デフォルトの三角を消す */
+	}
+
+/*　選択されるとdetails要素にopen属性がつく　*/
+	details[open] > summary{
+		color: #fff;
+		background: #667;
+		transition: .3s;
+	}
+	details[open] > summary{
+		color: #fff;
 	}
 
 	.inner{
