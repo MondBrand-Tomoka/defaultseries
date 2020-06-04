@@ -1,0 +1,153 @@
+<div id="txt__explain">
+	<p class="explain">このたびは当サイトにご訪問下さいまして、<br class="sp">誠にありがとうございます。<br>以下のフォームに必要事項をご記入の上、<br class="sp">「確認」をクリックしてください。</p>
+	<p class="explain">折り返し、ヒアリング日程につきまして<br class="sp">ご連絡を差し上げます。<br>受注状況、ご依頼内容・ヒアリング結果によりましては<br>ご依頼をお断りさせていただく場合もございますので<br class="sp">何卒ご容赦願います。</p>
+	<p class="fz12 mt15 status tc">★現在の稼働状況: <span class="b">●</span></p><!-- b,y,rいずれか -->
+</div>
+
+ここ↑は各ページに配置
+以下をMW FORMで設定
+
+<table class="w90p m30a">
+	<tbody>
+		<tr>
+			<th>お名前<span class="required">必須</span></th>
+			<td>[mwform_text name="name" id="name" class="name" size="60"]</td>
+		</tr>
+		<tr>
+			<th>（法人・団体様の場合）<br>会社名・法人名</th>
+			<td>[mwform_text name="company" id="company" class="company" size="60"]</td>
+		</tr>
+		<tr>
+			<th>ご連絡先メールアドレス<span class="required">必須</span></th>
+			<td>[mwform_email name="email" id="email" class="email" size="60"]</td>
+		</tr>
+		<tr>
+			<th>ご連絡先メールアドレス（確認）<span class="required">必須</span></th>
+			<td>[mwform_email name="email2" id="email2" class="email2" size="60"]</td>
+		</tr>
+		<tr>
+			<th>（ブログやホームページをお持ちの方）<br>サイトのURL</th>
+			<td>[mwform_url name="url" id="url" class="url" size="60"]</td>
+		</tr>
+		<tr>
+			<th>ご依頼内容（複数選択可）<span class="required">必須</span></th>
+			<td>[mwform_checkbox name="menu" id="menu" class="menu" children="名刺デザイン（印刷込）,ブログ・SNSデザイン（ヘッダー画像など）,ホームページ制作,チラシ・はがき・ポスター,相談のみプラン（デザインなし）,その他のご依頼（下記にご記入ください）" separator="," vertically="true"]</td>
+		</tr>
+		<tr>
+			<th>ご依頼の詳細や現在お困りの内容を教えてください<span class="required">必須</span></th>
+			<td>[mwform_textarea name="contents" id="contents" class="contents" cols="50" rows="7" placeholder="なるべく詳しくお書きいただけましたら助かります"]</td>
+		</tr>
+		<tr>
+			<th>デザインの参考にしたいサイトやショップなど<br class="sp">ありましたら教えてください<br>（任意：URLやブランド名など、形式は自由）</th>
+			<td>[mwform_textarea name="ex" id="ex" class="ex" cols="50" rows="3"]<br><span class="fz11">※必ずしもこちらに近いデザインになるとは限りませんが、<br class="sp">参考にさせていただきます</span></td>
+		</tr>
+		<tr>
+			<th>ご希望のヒアリング方法<span class="required">必須</span></th>
+			<td>[mwform_radio name="meeting" id="meeting" class="meeting" children="【推奨】オンライン無料通話,メールにてご返送" vertically="true"]</td>
+		</tr>
+		<tr>
+			<th>【アンケート】差し支えなければ、<br class="sp">当サービスをお選び下さった理由を<br class="sp">教えてください（任意）</th>
+			<td>[mwform_radio name="question" id="question" class="question" children="質の高いものを作ってくれそうだったため,自分に合ったものを作ってくれそうだったため,当サイトのデザインが好きだったため,ビジョンに共感したため,ていねいに対応してくれそうだったため,依頼したいメニューがちょうどあったため,その他" vertically="true"]</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="w85per" class="m15a tc">
+	<p class="fz12 explain">※<a href="/service/" class="under" target="_blank">サービス内容・規約</a>をご一読いただきますよう、<br class="sp">お願い申し上げます。<br>ページ内に説明・記載のある事項・価格についての<br class="sp">お問い合わせにつきましては<br>一切対応いたしかねます。</p>
+	<p class="accept tc">[mwform_checkbox name="accept" id="accept" class="accept" children="内容を確認し、承諾しました" separator=","]</p>
+</div>
+
+<div class="submit__container tc m30a">
+	[mwform_submitButton name="submit" class="submit" confirm_value="内容を確認する" submit_value="この内容で送信する"]
+</div>
+
+
+ここまで
+
+
+		<tr>
+			<th></th>
+			<td></td>
+		</tr>
+
+
+Key一覧
+
+{name}
+{company}
+{email}
+{email2}
+{url}
+{menu}
+{contents}
+{ex}
+{meeting}
+{question}
+{accept}
+{}
+{}
+{}
+{}
+
+
+
+元のフォーム↓
+
+<div id="main">
+	<form method="post" action="./">
+         <div class="section">
+			<h2 class="section__ttl">デザイン・ブランディング契約のご依頼・お見積（無料相談）</h2>
+			<div class="section__body">
+				<div id="txt_explain">
+					<p>このたびは当サイトにご訪問下さいまして、誠にありがとうございます。</p>
+					<p>以下のフォームに必要事項をご記入の上、「確認」をクリックしてください。</p>
+					<p>折り返し、ヒアリング日程につきましてご連絡を差し上げます。<br>受注状況、ご依頼内容・ヒアリング結果によりましては<br>ご依頼をお断りさせていただく場合もございますので何卒ご容赦願います。</p>
+					<p class="font12 mt15 status">★現在の稼働状況: <span class="b">●</span></p><!-- b,y,rいずれか -->
+				</div>
+
+				<table class="table w90per" cellspacing="0">
+					<tbody>
+						<tr>
+							<th>お名前<span class="red">*</span></th><td>姓：<input type="text" name="item_name_1" ,="" value="" style="width:80px">　名：<input type="text" name="item_name_2" ,="" value="" style="width:80px"></td></tr><tr><th>（法人・団体の場合）会社名・団体名</th><td><input type="text" name="item_stext01" value=""></td>
+						</tr>
+						<tr>
+							<th>ご連絡先メールアドレス<span class="red">*</span></th><td><input type="text" name="item_mail_1" ,="" value=""></td>
+						</tr>
+						<tr>
+							<th>ご連絡先メールアドレス(確認)<span class="red">*</span></th><td><input type="text" name="item_mail_2" ,="" value=""></td>
+						</tr>
+						<tr>
+							<th>（ブログやホームページをお持ちの方）サイトのURL</th><td><input type="text" name="item_hp" value=""></td>
+						</tr>
+						<tr>
+							<th>ご依頼内容（複数選択可）<span class="red">*</span></th><td><input type="checkbox" name="item_scheckbox01[0]" value="ホームページ制作" id="item_scheckbox01_ホームページ制作" style="width:20px"><label for="item_scheckbox01_ホームページ制作">ホームページ制作</label><br><input type="checkbox" name="item_scheckbox01[1]" value="名刺デザイン（印刷込）" id="item_scheckbox01_名刺デザイン（印刷込）" style="width:20px"><label for="item_scheckbox01_名刺デザイン（印刷込）">名刺デザイン（印刷込）</label><br><input type="checkbox" name="item_scheckbox01[2]" value="ヘッダーなどのブログデザイン" id="item_scheckbox01_ヘッダーなどのブログデザイン" style="width:20px"><label for="item_scheckbox01_ヘッダーなどのブログデザイン">ヘッダーなどのブログデザイン</label><br><input type="checkbox" name="item_scheckbox01[3]" value="チラシ・はがき・ポスター" id="item_scheckbox01_チラシ・はがき・ポスター" style="width:20px"><label for="item_scheckbox01_チラシ・はがき・ポスター">チラシ・はがき・ポスター</label><br><input type="checkbox" name="item_scheckbox01[4]" value="相談のみプラン（デザインなし）" id="item_scheckbox01_相談のみプラン（デザインなし）" style="width:20px"><label for="item_scheckbox01_相談のみプラン（デザインなし）">相談のみプラン（デザインなし）</label><br><input type="checkbox" name="item_scheckbox01[5]" value="その他のご依頼（下記にご記入ください）" id="item_scheckbox01_その他のご依頼（下記にご記入ください）" style="width:20px"><label for="item_scheckbox01_その他のご依頼（下記にご記入ください）">その他のご依頼（下記にご記入ください）</label><br></td>
+						</tr>
+						<tr>
+							<th>ご依頼の詳細や現在お困りの内容を教えてください<span class="red">*</span></th><td><textarea name="item_sarea01" rows="10"></textarea></td></tr>
+						<tr>
+							<th>デザインやレイアウトの参考にしたいサイトやショップなどありましたら教えてください（任意：URLやショップ名など、形式は自由）</th><td><textarea name="item_sarea02" rows="3"></textarea></td>
+						</tr>
+						<tr>
+							<th>ご希望のヒアリング方法<span class="red">*</span></th><td><input type="radio" name="item_sradio02" value="【推奨】オンライン無料通話" id="item_sradio02_【推奨】オンライン無料通話" style="width:20px"><label for="item_sradio02_【推奨】オンライン無料通話">【推奨】オンライン無料通話</label><br><input type="radio" name="item_sradio02" value="メールにてご返送" id="item_sradio02_メールにてご返送" style="width:20px"><label for="item_sradio02_メールにてご返送">メールにてご返送</label><br></td></tr>
+						<tr>
+							<th>【アンケート】差し支えなければ、当サービスをお選び下さった理由を教えてください（任意）</th><td><input type="radio" name="item_sradio01" value="質の高いものを作ってくれそうだったため" id="item_sradio01_質の高いものを作ってくれそうだったため" style="width:20px"><label for="item_sradio01_質の高いものを作ってくれそうだったため">質の高いものを作ってくれそうだったため</label><br><input type="radio" name="item_sradio01" value="自分に合ったものを作ってくれそうだったため" id="item_sradio01_自分に合ったものを作ってくれそうだったため" style="width:20px"><label for="item_sradio01_自分に合ったものを作ってくれそうだったため">自分に合ったものを作ってくれそうだったため</label><br><input type="radio" name="item_sradio01" value="当サイトのデザインが好きだったため" id="item_sradio01_当サイトのデザインが好きだったため" style="width:20px"><label for="item_sradio01_当サイトのデザインが好きだったため">当サイトのデザインが好きだったため</label><br><input type="radio" name="item_sradio01" value="ビジョンに共感したため" id="item_sradio01_ビジョンに共感したため" style="width:20px"><label for="item_sradio01_ビジョンに共感したため">ビジョンに共感したため</label><br><input type="radio" name="item_sradio01" value="ていねいに対応してくれそうだったため" id="item_sradio01_ていねいに対応してくれそうだったため" style="width:20px"><label for="item_sradio01_ていねいに対応してくれそうだったため">ていねいに対応してくれそうだったため</label><br><input type="radio" name="item_sradio01" value="依頼したいメニューがちょうどあったため" id="item_sradio01_依頼したいメニューがちょうどあったため" style="width:20px"><label for="item_sradio01_依頼したいメニューがちょうどあったため">依頼したいメニューがちょうどあったため</label><br><input type="radio" name="item_sradio01" value="その他" id="item_sradio01_その他" style="width:20px"><label for="item_sradio01_その他">その他</label><br></td>
+						</tr>
+				</tbody>
+			</table>
+
+				<div class="w85per" style="margin: 0 auto;">
+					<p class="font12">※<a href="https://yourbrand.mondbrand.net/service/" target="_blank">サービス内容・規約</a>をご一読いただきますよう、お願い申し上げます。<br>ページ内に説明・記載のある事項・価格についてのお問い合わせにつきましては対応いたしかねます。<br></p>
+				</div>
+
+				<div class="button_box">
+					<input type="submit" name="submit_button" value="ご依頼内容の確認">
+				</div>
+			</div>
+		</div>
+	</form>
+
+		<div class="button_box">
+			[<a href="https://yourbrand.mondbrand.net">サイトへ戻る</a>]
+		</div>
+
+</div>
