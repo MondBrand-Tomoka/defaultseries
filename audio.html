@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	てすと
+	<div class="audio" style="background:url(sample2.jpg) center top no-repeat; background-size: contain; width: 600px; height: 500px; padding: 200px 50px;">
+		下の文字をクリックしてね<br>
+		<audio src="test.mp3" autoplay="true" loop playsinline controls controlslist="nodownload">サポートされてません</audio>
+	</div>
+	<img src="sample1.jpg" alt="" width="600px">
+</body>
+</html>
+
+
+
+
+<audio src="test.mp3" autoplay="true" loop playsinline controls controlslist="nodownload">サポートされてません</audio>
+
+
+中の要素はサポートされてないときに出るメッセージ
+
+背景つけたい時はaudioをラップして
+background-imageとかPaddingつける
+
+
+ダウンロード禁止したい時は
+右端のダウンロードアイコン消せる
+controlsList="nodownload"
+
+参考：
+https://yokochan-y2.com/chrome-audio-download-button-delete/
+
+※厳密に禁止したいなら右クリック禁止
+oncontextmenu="return false;"
+<video src="test.mp4" oncontextmenu="return false;" controls controlsList="nodownload" preload="auto" width="100%" height="100%"></video>
+

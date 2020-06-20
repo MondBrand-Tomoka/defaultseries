@@ -3,3 +3,43 @@
 <meta http-equiv="refresh" content="60; URL=http://www.example.com/">
 content秒後に指定したURLへリダイレクトする
 301リダイレクトが優先、meta refreshは非推奨ではあるがSEO評価を多少引き継げる
+
+
+
+301
+参考：
+https://www.itti.jp/web-design/htaccess-redirect/
+https://www.ecco.jp/blog/htaccess-redirect/
+
+〇ドメインが変わった（URLはそのまま） old.com → new.com
+RewriteEngine On
+RewriteCond %{http_host} ^www.old.com
+RewriteRule ^(.*) http://www.new.com/$1 [R=301,L]
+
+
+〇ディレクトリが変わった
+RewriteEngine on
+RewriteRule ^aa(.*)$ /bb$1 [R=301,L]
+
+
+〇ページ名だけ変わった
+「domain.com/old.html」を「domain.com/new.html」に変更する場合
+RewriteEngine on
+RewriteRule ^old.html$ /new.html [R=301,L]
+
+
+〇ドメイン、ファイル名、ディレクトリなど、URLが大幅に変わった
+RewriteEngine on
+RewriteRule https://www.old.com/old/old.html https://www.new.com/new/new.html [R=301,L]
+
+または
+RewirteEngine on
+Redirect permanent https://www.old.com/old/old.html https://www.new.com/new/new.html
+
+
+〇httpをhttpsにリダイレクト
+RewriteEngine on
+RewriteCond %{ HTTPS} off
+RewriteRule ^(.*)$ https://%{ HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+
