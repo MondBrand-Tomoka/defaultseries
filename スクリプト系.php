@@ -3,13 +3,17 @@ CDN
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 
-
 Totop
 <script>
 
 	WPの時
-	jQuery(function ($) {
+		jQuery(function ($) {
+			$(window).scrollとかclickとか(function(){
+				ここに関数が入る;
+			});//Totop
+		});
 
+	jQuery(function ($) {
 		$(".toTopBtn").hide();
 		$(window).scroll(function(){
 			if($(this).scrollTop() > 1200){
@@ -18,10 +22,16 @@ Totop
 				$(".toTopBtn").fadeOut();//defaultは400
 			}
 		});//Totop
-
 	});
 
+
 	静的HTML
+		$(function(){
+			$(window).scrollとかclickとか(function(){
+				ここに関数が入る;
+			});//Totop
+		});
+
 	$(function(){
 		$(".toTopBtn").hide();
 		$(window).scroll(function(){

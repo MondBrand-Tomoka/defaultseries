@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	
+
+	<title>Document</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+</head>
+<body>
+	<div class="container">
+		<h1>動画の動作確認用</h1>
+
+		<h2>1.ただのaタグリンク</h2>
+		<p>クリックするとページ遷移して動画再生される</p>
+		<a href="images/sample.mp4" playsinline>
+			<img src="images/test_1.jpg" alt="" width="400px">
+		</a>
+
+		<h2>Fancyboxで実装</h2>
+		<ul style="display: flex; justify-content: flex-start;">
+			<li>
+				<a href="images/sample.mp4" data-fancybox>
+					<img src="images/test_1.jpg" alt="" width="400px">
+				</a>
+				<p>クリックするとモーダルで動画再生<br>（ロード中はコーヒー豆の画像が出る）</p>
+			</li>
+			<li>
+				<a href="images/test_1.jpg" data-fancybox>
+					<img src="images/test_1.jpg" alt="" width="400px">
+				</a>
+				<p>これはただの静止画拡大</p>
+			</li>
+		</ul>
+
+		<p>参考：<br>https://fancyapps.com/fancybox/3/</p>
+
+		<section class="youtube-bg">
+			<h2>背景動画としてYoutubeを再生</h2>
+			<p>この下に動画が再生されます</p>
+		</section>
+
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+</body>
+</html>
