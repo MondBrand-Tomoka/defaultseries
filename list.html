@@ -12,34 +12,56 @@
 	*{ list-style-type: none; }
 
 
-	ul.discList{
-		width: 90%;
-		max-width: 640px;
-		padding-left: 10%;
-		box-sizing: border-box;
-		text-align: left;
-	}
+ul.discList, 
+ul.squareList, 
+ol.numList{
+	width: 90%;
+	max-width: 780px;
+	margin-bottom: 1.6em;
+	padding-left: 9%;
+	box-sizing: border-box;
+	text-align: left;
+}
+ul.discList li, 
+ul.squareList li, 
+ol.numList li{
+	line-height: 1.81em;
+	letter-spacing: .06em;
+}
+ul.discList li + li, 
+ul.squareList li + li, 
+ol.numList li + li{ margin-top: .7em; }
 
-	ul.discList li + li{ margin-top: 8px; } 
-	ul.discList li::before{
-		content:"";
-		display: inline-block;
-		background: #ddd;
-		width: 14px;
-		height: 14px;
-		border-radius: 7px;
-		margin-left: -30px;
-		margin-right: 16px;
-	}
+ol.numList{
+	counter-reset: item;/*連番つける*/
+}
 
 
-	@media screen and (max-width: 660px){
-		ul.discList li::before{
-			width: 9px;
-			height: 9px;
-			margin-left: -22px;
-			margin-right: 12px;
-		}
-	}
+ul.discList li::before, 
+ul.squareList li::before{
+	content:"";
+	display: inline-block;
+	width: .8em;
+	height: .8em;
+	margin-left: -1.9em;
+	margin-right: 1.1em;
+}
+
+ul.discList li::before{
+	background: #ddd;
+	border-radius: 1em;
+}
+ul.squareList li::before{
+	background: #c40069;
+}
+ol.numList li::before{
+	counter-increment: item;
+	content: counter(item)".";
+	display: inline-block;
+	color: #bbb;
+	font-size: 1.5em;
+	margin-left: -1.7em;
+	margin-right: .8em;
+}
 
 </style>

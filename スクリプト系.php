@@ -46,6 +46,29 @@ Totop
 </script>
 
 
+fadeinとバーガーメニュー
+<script>
+	$(function(){
+		$(window).scroll(function(){
+            $('.scroll').each(function(){
+                var elemPos = $(this).offset().top;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll > elemPos - windowHeight + 200){
+                    $(this).addClass('scrollin');
+                }else{
+                    $(this).removeClass('scrollin');
+                }
+            });
+		});
+
+		$(".humbMenu").click(function(){
+			$(this).toggleClass("active");
+			$(".glonav__menu").toggleClass("active");
+		});
+	});
+</script>
+
 
 クリップボードにコピー
 <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
@@ -77,3 +100,7 @@ Totop
 
 タイプテキスト
 <script src="js/typetext.js"></script>
+
+
+
+
